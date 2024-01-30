@@ -1,10 +1,9 @@
+
+// RockPaperScissors class definition (assuming it's defined in rock_paper_scissors.js)
 class RockPaperScissors {
   constructor(username) {
     this.username = username;
-    this.score = {
-      user: 0,
-      cpu: 0
-    };
+    this.score = { user: 0, cpu: 0 };
     this.gameHistoryLog = [];
   }
 

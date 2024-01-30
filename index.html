@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Type your title here</title>
-    <!-- Bootstrap Styles-->
-    <link rel="stylesheet" href="resources/styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="resources/styles/styles.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <!-- WORK FROM INSIDE THIS CONTAINER-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="resources/styles/styles.css"> <!-- Your custom stylesheet -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    <div id="welcome-screen">
+      <form id="name-form" class="form-group"> <!-- Added class="form-group" to the form -->
+        <div>
+          <label for="username">Your Name</label>
+          <input type="text" placeholder="Enter Name Here...." id="username" name="username" class="form-control">
+          <!-- Added class="form-control" to the input -->
+          <button id="start-game-button" class="btn btn-primary">Start Game!</button>
+        </div>
+      </form>
     </div>
+    <div id="game-screen">
+      <div id="score-tally">
+        <p id="score">User: 0 v CPU: 0</p>
+      </div>
+      <form id="game-form" class="form-group"> <!-- Added class="form-group" to the form -->
+        <div>
+          <label for="user-selection">Select your choice</label>
+          <select id="user-selection" name="user-selection" class="custom-select">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+          </select>
+          <button id="go-button" class="btn btn-success">Go!</button>
+        </div>
+      </form>
+      <!-- Add class="form-group" to the div below the forms -->
+      <div class="form-group">
+        <!-- Content of the div goes here -->
+      </div>
+      <p id="game-history"></p>
+    </div>
+  </div>
+</body>
 
-    <!-- Our own Scripts -->
-    <script src="resources/scripts/rock_paper_scissors.js"></script>
-    <script src="resources/scripts/index.js"></script>
-  </body>
 </html>
